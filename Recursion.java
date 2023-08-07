@@ -87,7 +87,38 @@ public class Recursion {
 		// reverse of abcd is d +reverse of abc
 		return s.substring(s.length() - 1) + reverseString(s.substring(0, s.length() - 1));
 	}
-
+	
+	static int GCD(int x, int y)
+    {
+        // Everything is divisible by 0
+        if (x == 0)
+            return y;
+        if (y == 0)
+            return x;
+  
+        // Both the numbers are equal
+        if (x == y)
+            return x;
+  
+        // x is greater
+        if (x > y)
+            return GCD(x - y, y);
+        return GCD(x, y - x);
+    }
+  
+	// Java recursive function to solve tower of hanoi puzzle
+    static void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod)
+    {
+        if (n == 1)
+        {
+            System.out.println("Move disk 1 from rod " +  from_rod + " to rod " + to_rod);
+            return;
+        }
+        towerOfHanoi(n-1, from_rod, aux_rod, to_rod);
+        System.out.println("Move disk " + n + " from rod " +  from_rod + " to rod " + to_rod);
+        towerOfHanoi(n-1, aux_rod, to_rod, from_rod);
+    }
+     
 	public static void main(String[] args) {
 		Recursion obj = new Recursion();
 		int N = 5, total_sum = 0;
@@ -113,6 +144,9 @@ public class Recursion {
 		System.out.println("Factorial of 7 is " + Recursion.factorial(7));
 		System.out.println("nCr of 7 and 3 is " + Recursion.calclateNcr(7, 3));
 		System.out.println(Recursion.reverseString("abcdefgh"));
+		System.out.println("GCD of 75 and 26 is "+ Recursion.GCD(75, 26) );
+		int n=4;
+        Recursion.towerOfHanoi(n, 'A', 'C', 'B');  // A, B and C are names of rods
 
 	}
 }
