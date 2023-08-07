@@ -8,3 +8,5 @@ You will find solution of the following recursion problems
 5. program to get sum of digits of a number
 6. program to calculate nCr
 7. program to reverse string
+8. program to find GCD or HCF
+9. Program to solve Tower of Hanoi
