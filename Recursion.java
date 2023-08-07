@@ -17,7 +17,7 @@ public class Recursion {
 	}
 
 	// program to find nth fibonacci number
-	// we can use static or without statics
+	// we can use static or without static
 	public static int calculatenNthFibonacci(int n) {
 		if (n == 1)
 			return 0;
@@ -26,7 +26,7 @@ public class Recursion {
 		return calculatenNthFibonacci(n - 1) + calculatenNthFibonacci(n - 2);
 	}
 
-	// program to find 1 to N
+	// program to find print 1 to N
 	public static void printN(int n) {
 		if (n == 1) {
 			System.out.println(n);
@@ -75,7 +75,7 @@ public class Recursion {
 		return n * factorial(n - 1);
 	}
 
-	// recusrion to calculate nCr
+	// recursion to calculate nCr
 	static double calclateNcr(int n, int r) {
 		return factorial(n) / (factorial(r) * factorial(n - r));
 	}
